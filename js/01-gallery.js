@@ -45,6 +45,7 @@ function onGalleryClick(evt) {
   galleryEl.addEventListener('keydown', evt => {
     if (evt.key === 'Escape') {
       instance.close();
+      galleryEl.removeEventListener('keydown', onGalleryClick);
     }
   });
 }
